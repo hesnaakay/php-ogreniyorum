@@ -7,20 +7,30 @@
 
 //Aşağıda olduğu gibi sayfada php kodları dışında kod blokları varsa php etiketinin kapatılması gerekir.
 
+$sayi1 = 23;
+$sayi2 = 18;
+$deger = 12;
 ?>
 
-<html>
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP Etiketi Kullanımı</title>
+</head>
 
 <body>
 
-<p class="strong">Buraya bir şeyler yazalım.</p>
-<? echo "1. kullanım"; // html kodları içerisinde kısa kullanımıdır. ?>
-<p class="strong">Buraya bir şeyler yazalım.</p>
-<?= $deger = 1;//2. kullanım    ?>
-<p class="strong">Buraya bir şeyler yazalım.</p>
+<p style="color:red">Buraya bir şeyler yazalım.</p>
+<? echo $sayi1 ." + ". $sayi2 ." = ". ($sayi1 + $sayi2); // html kodları içerisinde <?php 'nin kısa kullanımıdır. ?>
+<p style="color:red">Buraya bir şeyler yazalım.</p>
+<?=$deger ?> <!-- <? echo $deger;?> bu kullanımın kısa kullanımıdır.-->
+
+<br/>
+<p style="color:red">Buraya bir şeyler yazalım.</p>
 <?php
 if ($deger)
-    echo "3. kullanım"; //html donları içerisinde normal kullanımıdır.
+    echo "<br/>". "$deger"; //html kodları içerisinde normal kullanımıdır.
 ?>
 </body>
 
